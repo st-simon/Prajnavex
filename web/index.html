@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prajnavex</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Prajnavex | 般若维</h1>
+        <p>A structured knowledge base for clear seeing.</p>
+      </div>
+      <button id="refresh">Refresh</button>
+    </header>
+    <main>
+      <section class="sidebar">
+        <div id="status" class="metrics"></div>
+        <nav>
+          <button data-view="inbox">Inbox Images</button>
+          <button data-view="drafts">Source Drafts</button>
+          <button data-view="source">Sources</button>
+          <button data-view="card">Cards</button>
+          <button data-view="skill">Skills</button>
+        </nav>
+        <div id="list" class="list"></div>
+      </section>
+      <section class="content">
+        <div id="actions" class="actions"></div>
+        <pre id="preview">Select an item.</pre>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
