@@ -12,6 +12,10 @@ MVP architecture for turning reading material into structured notes, reusable sk
 raw input -> inbox -> source -> knowledge card -> skill -> bundle -> tool/workflow
 ```
 
+## Architecture
+
+See [docs/architecture-overview.md](docs/architecture-overview.md) for the full project map and Mermaid diagrams.
+
 ## First Use
 
 Open `vault/` as an Obsidian vault. Capture freely in `vault/00_inbox`, then structure items before moving them into sources, cards, skills, or bundles.
