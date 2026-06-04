@@ -5,9 +5,14 @@ title: "咖啡豆选择应从口味偏好反推品种"
 summary: "选择咖啡豆时，先判断自己偏好果酸、均衡、低酸或浓郁，再匹配对应品种。"
 tags: [coffee, preference, decision-guide]
 stage: extracted
-source_id: "source-pasted-image-20260528120958"
+source_id: "source-20260602-coffee-bean-family-infographic"
 source_url: ""
 created: 2026-06-02
+updated: 2026-06-04
+last_verified: 2026-06-04
+review_after: 2026-12-04
+confidence: high
+staleness: fresh
 usefulness: medium
 actionability: recommendation-rule
 promotable: true

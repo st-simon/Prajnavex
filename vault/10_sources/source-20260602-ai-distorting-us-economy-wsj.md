@@ -9,6 +9,11 @@ source_type: pdf
 source_url: "https://cn.wsj.com/articles/ai-is-distorting-practically-everything-about-the-economy-8c9d8a1a"
 author: "WSJ / Capital Account"
 created: 2026-06-02
+updated: 2026-06-04
+last_verified: 2026-06-04
+review_after: 2026-09-04
+confidence: medium
+staleness: watch
 usefulness: high
 related_cards: [card-20260602-ai-capex-macro-distortion, card-20260602-ai-second-layer-beneficiary-map, card-20260602-ai-capex-reversal-risk, card-20260602-ai-import-leakage, card-20260602-ai-labor-sentiment-disconnect]
 promoted_skills: [skill-20260602-ai-second-layer-beneficiary-research]

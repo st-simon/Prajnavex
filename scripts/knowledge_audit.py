@@ -31,6 +31,8 @@ def audit_staleness_fields(record, issues, today):
     missing = sorted(field for field in STALE_FIELDS if not scalar(record.get(field)))
     if missing:
         issues.append(("warning", path, f"missing audit fields: {', '.join(missing)}"))
+    if scalar(record.get("stage")) == "archived":
+        return
     review_after = scalar(record.get("review_after"))
     if review_after:
         review_date = parse_date(review_after)

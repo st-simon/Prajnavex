@@ -10,6 +10,11 @@ inputs: [industry, company, financials, customer-exposure, capex-cycle]
 outputs: [candidate-map, thesis, risk-checklist, research-questions]
 source_cards: [card-20260602-ai-second-layer-beneficiary-map, card-20260602-ai-capex-reversal-risk]
 created: 2026-06-02
+updated: 2026-06-04
+last_verified: 2026-06-04
+review_after: 2026-07-04
+confidence: medium
+staleness: watch
 maturity: experimental
 ---
 

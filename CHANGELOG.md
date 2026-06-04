@@ -8,6 +8,7 @@
 - Added `knowledge_audit.py` for staleness and operational review warnings.
 - Added privacy and portability documentation.
 - Updated templates with audit fields.
+- Backfilled audit fields on existing notes and archived the duplicate coffee infographic test source.
 
 ## 0.1.0 - 2026-06-02
 

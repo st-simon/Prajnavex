@@ -35,6 +35,12 @@ class KnowledgeIndexTests(unittest.TestCase):
         issues = audit_records(records)
         self.assertTrue(any("missing audit fields" in message for _, _, message in issues))
 
+    def test_audit_ignores_archived_stale_notes(self):
+        records = [
+            {"path": "vault/10_sources/source.md", "id": "source-x", "type": "source", "title": "S", "summary": "S", "tags": [], "stage": "archived", "created": "2026-06-04", "updated": "2026-06-04", "last_verified": "2026-06-04", "review_after": "2026-12-04", "confidence": "medium", "staleness": "stale", "source_type": "article"},
+        ]
+        self.assertEqual(audit_records(records), [])
+
 
 if __name__ == "__main__":
     unittest.main()

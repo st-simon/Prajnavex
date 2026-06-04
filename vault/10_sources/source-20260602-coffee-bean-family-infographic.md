@@ -9,8 +9,13 @@ source_type: image
 source_url: ""
 author: ""
 created: 2026-06-02
+updated: 2026-06-04
+last_verified: 2026-06-04
+review_after: 2026-12-04
+confidence: high
+staleness: fresh
 usefulness: medium
-related_cards: []
+related_cards: [card-20260602-coffee-bean-flavor-axis, card-20260602-coffee-bean-preference-matching, card-20260602-infographic-to-structured-source]
 promoted_skills: []
 local_image: "../00_inbox/imported-from-initial-vault/Pasted image 20260528120958.png"
 ---

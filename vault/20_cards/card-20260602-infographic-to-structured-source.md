@@ -5,9 +5,14 @@ title: "信息图适合先转成结构化文本再提炼卡片"
 summary: "图片类资料尤其是信息图，应该先保留 OCR 原文，再整理 Cleaned Text，最后提炼 source 和 cards。"
 tags: [prajnavex, image-ingest, ocr, workflow]
 stage: extracted
-source_id: "source-pasted-image-20260528120958"
+source_id: "source-20260602-coffee-bean-family-infographic"
 source_url: ""
 created: 2026-06-02
+updated: 2026-06-04
+last_verified: 2026-06-04
+review_after: 2026-12-04
+confidence: high
+staleness: fresh
 usefulness: high
 actionability: workflow-rule
 promotable: true

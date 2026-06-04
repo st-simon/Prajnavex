@@ -14,8 +14,6 @@ Done criteria:
 
 ## Next
 
-- Backfill audit fields on existing sources, cards, and skills.
-- Resolve or archive duplicate coffee infographic source notes.
 - Add the first bundle note with input/output contract fields.
 - Add semantic duplicate detection after the structural validator is stable.
 
@@ -29,10 +27,12 @@ Done criteria:
 - Added lightweight product plan and local Web UI MVP for inbox, drafts, sources, cards, and skills.
 - Added Windows desktop launcher for the local Prajnavex Web UI.
 - Started v0.2 integrity and audit workstream.
+- Backfilled audit fields on existing sources, cards, and skills.
+- Resolved the duplicate coffee infographic source by archiving the early test source and moving card links to the canonical source.
 
 ## Known Gaps
 
 - No browser capture extension is wired yet.
 - No embedding or semantic search index exists yet.
 - No direct Obsidian plugin dependency has been selected.
-- Audit warnings are visible but not yet backfilled into all existing notes.
+- Audit is clean on the current vault; future warnings should be treated as review work.

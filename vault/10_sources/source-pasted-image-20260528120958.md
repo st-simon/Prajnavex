@@ -1,16 +1,22 @@
 ---
 id: source-pasted-image-20260528120958
 type: source
-title: "一张图看懂咖啡豆家族"
-summary: "一张咖啡豆品种信息图，比较埃塞俄比亚、哥伦比亚、巴西、肯尼亚、曼特宁和危地马拉咖啡豆的酸度、苦度、醇厚度、风味关键词与适用人群。"
-tags: [image, inbox, needs-review]
-stage: source
+title: "一张图看懂咖啡豆家族（早期测试归档）"
+summary: "早期图片入库测试 source，内容已合并到 source-20260602-coffee-bean-family-infographic，保留用于流程追溯。"
+tags: [image, inbox, archived, duplicate]
+stage: archived
 source_type: image
 source_url: ""
 author: ""
 created: 2026-06-02
+updated: 2026-06-04
+last_verified: 2026-06-04
+review_after: 2026-12-04
+confidence: medium
+staleness: stale
 usefulness: medium
-related_cards: [card-20260602-coffee-bean-flavor-axis, card-20260602-coffee-bean-preference-matching, card-20260602-infographic-to-structured-source]
+duplicate_of: source-20260602-coffee-bean-family-infographic
+related_cards: []
 promoted_skills: []
 local_image: "../00_inbox/imported-from-initial-vault/Pasted image 20260528120958.png"
 ---

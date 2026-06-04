@@ -8,6 +8,11 @@ stage: promotable
 source_id: "source-20260602-ai-distorting-us-economy-wsj"
 source_url: "https://cn.wsj.com/articles/ai-is-distorting-practically-everything-about-the-economy-8c9d8a1a"
 created: 2026-06-02
+updated: 2026-06-04
+last_verified: 2026-06-04
+review_after: 2026-09-04
+confidence: medium
+staleness: watch
 usefulness: high
 actionability: skill-candidate
 promotable: true
