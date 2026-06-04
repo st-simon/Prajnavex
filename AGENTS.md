@@ -6,7 +6,7 @@ Subtitle: A structured knowledge base for clear seeing.
 
 Chinese subtitle: 以般若照见，以结构成维
 
-This project follows the workspace rules in `E:\codex projects\AGENTS.md` and `E:\codex projects\_workspace`.
+This project follows the workspace rules in `<workspace-root>/AGENTS.md` and `<workspace-root>/_workspace`.
 
 ## Project Scope
 

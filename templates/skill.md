@@ -10,6 +10,11 @@ inputs: []
 outputs: []
 source_cards: []
 created: YYYY-MM-DD
+updated: YYYY-MM-DD
+last_verified: YYYY-MM-DD
+review_after: YYYY-MM-DD
+confidence: unknown
+staleness: unknown
 maturity: experimental
 ---
 

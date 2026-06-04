@@ -14,10 +14,10 @@ Done criteria:
 
 ## Next
 
-- Add 2-4 more real captured articles to `vault/00_inbox`.
-- Compare new AI investing sources against the first WSJ source.
-- Refine the AI second-layer beneficiary skill after testing it on real companies.
-- Revisit schema after one week of real use.
+- Backfill audit fields on existing sources, cards, and skills.
+- Resolve or archive duplicate coffee infographic source notes.
+- Add the first bundle note with input/output contract fields.
+- Add semantic duplicate detection after the structural validator is stable.
 
 ## Completed
 
@@ -28,10 +28,11 @@ Done criteria:
 - Upgraded image ingest rules to dual-track OCR evidence plus vision-first semantic extraction.
 - Added lightweight product plan and local Web UI MVP for inbox, drafts, sources, cards, and skills.
 - Added Windows desktop launcher for the local Prajnavex Web UI.
+- Started v0.2 integrity and audit workstream.
 
 ## Known Gaps
 
 - No browser capture extension is wired yet.
-- No OCR/image ingestion workflow is defined yet.
 - No embedding or semantic search index exists yet.
 - No direct Obsidian plugin dependency has been selected.
+- Audit warnings are visible but not yet backfilled into all existing notes.

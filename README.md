@@ -25,7 +25,10 @@ Open `vault/` as an Obsidian vault. Capture freely in `vault/00_inbox`, then str
 ```powershell
 python scripts\knowledge_index.py --check
 python scripts\knowledge_index.py --write-index
+python scripts\knowledge_audit.py
 ```
+
+Validation checks structural correctness. Audit surfaces review and staleness work without blocking normal use.
 
 ## Local Web UI
 
@@ -41,8 +44,17 @@ http://127.0.0.1:8765
 
 Keep the terminal running while using the UI.
 
-Windows desktop launcher:
+## Bundle Workflow Drafts
+
+```powershell
+python scripts\bundle_tool_draft.py --list
+python scripts\bundle_tool_draft.py --bundle-id bundle-YYYYMMDD-slug
+```
+
+Optional Windows desktop launcher:
 
 ```text
-C:\Users\夏骏\Desktop\Prajnavex.lnk
+<desktop>\Prajnavex.lnk
 ```
+
+See [docs/portability.md](docs/portability.md) and [PRIVACY.md](PRIVACY.md) before sharing or publishing a vault.
