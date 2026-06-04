@@ -7,6 +7,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from knowledge_audit import audit_records
 from knowledge_index import build_backlinks, parse_value, validate_records
+from prajnavex_web import api_status
 
 
 class KnowledgeIndexTests(unittest.TestCase):
@@ -40,6 +41,12 @@ class KnowledgeIndexTests(unittest.TestCase):
             {"path": "vault/10_sources/source.md", "id": "source-x", "type": "source", "title": "S", "summary": "S", "tags": [], "stage": "archived", "created": "2026-06-04", "updated": "2026-06-04", "last_verified": "2026-06-04", "review_after": "2026-12-04", "confidence": "medium", "staleness": "stale", "source_type": "article"},
         ]
         self.assertEqual(audit_records(records), [])
+
+    def test_web_status_reports_validation_warnings(self):
+        status = api_status()
+        self.assertIn("counts", status)
+        self.assertIn("errors", status)
+        self.assertIn("warnings", status)
 
 
 if __name__ == "__main__":

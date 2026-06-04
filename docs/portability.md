@@ -14,11 +14,24 @@ Open `<vault-root>` as the Obsidian vault.
 
 Start the Web UI from `<project-root>`:
 
+Windows PowerShell:
+
 ```powershell
 python scripts\prajnavex_web.py
 ```
 
-The Windows desktop launcher is a convenience for one machine. It is not part of the portable contract.
+macOS/Linux:
+
+```bash
+python3 scripts/prajnavex_web.py
+```
+
+Convenience launchers are machine-specific adapters. They are not part of the portable knowledge contract:
+
+```text
+Windows: Start Prajnavex.cmd
+macOS: scripts/start-prajnavex-web.command
+```
 
 ## Git Hygiene
 

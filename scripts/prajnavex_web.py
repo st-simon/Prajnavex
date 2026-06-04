@@ -36,7 +36,7 @@ def list_drafts():
 
 
 def api_status():
-    records, errors = build_index()
+    records, errors, warnings = build_index()
     counts = {"source": 0, "card": 0, "skill": 0, "bundle": 0}
     for record in records:
         counts[record.get("type", "")] = counts.get(record.get("type", ""), 0) + 1
@@ -45,14 +45,15 @@ def api_status():
         "drafts": len(list_drafts()),
         "inbox_images": len(list(iter_images())),
         "errors": errors,
+        "warnings": warnings,
     }
 
 
 def api_index(kind=None):
-    records, errors = build_index()
+    records, errors, warnings = build_index()
     if kind:
         records = [record for record in records if record.get("type") == kind]
-    return {"records": records, "errors": errors}
+    return {"records": records, "errors": errors, "warnings": warnings}
 
 
 def api_inbox_images():

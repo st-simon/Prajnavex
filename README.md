@@ -22,18 +22,36 @@ Open `vault/` as an Obsidian vault. Capture freely in `vault/00_inbox`, then str
 
 ## Verification
 
+Windows PowerShell:
+
 ```powershell
 python scripts\knowledge_index.py --check
 python scripts\knowledge_index.py --write-index
 python scripts\knowledge_audit.py
 ```
 
+macOS/Linux:
+
+```bash
+python3 scripts/knowledge_index.py --check
+python3 scripts/knowledge_index.py --write-index
+python3 scripts/knowledge_audit.py
+```
+
 Validation checks structural correctness. Audit surfaces review and staleness work without blocking normal use.
 
 ## Local Web UI
 
+Windows PowerShell:
+
 ```powershell
 python scripts\prajnavex_web.py
+```
+
+macOS/Linux:
+
+```bash
+python3 scripts/prajnavex_web.py
 ```
 
 Open:
@@ -44,17 +62,27 @@ http://127.0.0.1:8765
 
 Keep the terminal running while using the UI.
 
+Optional launchers:
+
+```text
+Windows: Start Prajnavex.cmd
+macOS: scripts/start-prajnavex-web.command
+```
+
 ## Bundle Workflow Drafts
+
+Windows PowerShell:
 
 ```powershell
 python scripts\bundle_tool_draft.py --list
 python scripts\bundle_tool_draft.py --bundle-id bundle-YYYYMMDD-slug
 ```
 
-Optional Windows desktop launcher:
+macOS/Linux:
 
-```text
-<desktop>\Prajnavex.lnk
+```bash
+python3 scripts/bundle_tool_draft.py --list
+python3 scripts/bundle_tool_draft.py --bundle-id bundle-YYYYMMDD-slug
 ```
 
 See [docs/portability.md](docs/portability.md) and [PRIVACY.md](PRIVACY.md) before sharing or publishing a vault.
