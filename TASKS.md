@@ -19,6 +19,7 @@ Done criteria:
 
 ## Completed
 
+- Added Jack D. Schwager's Unknown Market Wizards / 《不为人知的金融怪杰》 as the first official book source for the investment knowledge base, with four extracted research cards.
 - Imported the WSJ AI economy PDF as the first structured source.
 - Extracted five knowledge cards.
 - Promoted one card cluster into a draft investment research skill.
