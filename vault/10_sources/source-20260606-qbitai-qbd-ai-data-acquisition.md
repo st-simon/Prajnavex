@@ -5,8 +5,8 @@ title: "千百度收购本原智数，切入 AI 数据服务"
 summary: "量子位文章报道港股鞋履公司千百度通过收购股权并认购新股，取得 AI 数据服务商本原智数控股权益，形成“鞋履 + 人工智能数据”双主业；素材的关键价值在于观察 AI 产业链中高质量数据、供应商中立性和传统公司转型交易结构。"
 tags: [ai, data, acquisition, hong-kong-stocks, industry-research, capital-markets]
 stage: source
-source_type: pdf
-source_url: ""
+source_type: article
+source_url: "https://www.qbitai.com/"
 author: "量子位 / QbitAI"
 created: 2026-06-06
 updated: 2026-06-06
@@ -17,8 +17,7 @@ staleness: watch
 usefulness: high
 related_cards: [card-20260606-ai-data-scarcity-as-bottleneck, card-20260606-ai-data-supplier-neutrality, card-20260606-ai-transformation-via-acquisition]
 promoted_skills: []
-raw_note: "../00_inbox/数据是否就是AI世界的未来.md"
-local_pdf: "../FireShot Capture 043 - 港股鞋王千百度，一夜完成AI数据公司转型 - [mp.weixin.qq.com].pdf"
+raw_note: ""
 ---
 
 # 千百度收购本原智数，切入 AI 数据服务
@@ -54,11 +53,11 @@ local_pdf: "../FireShot Capture 043 - 港股鞋王千百度，一夜完成AI数�
 
 ## Possible Follow Up
 
-- 补齐公众号原始 URL。
+- 补齐公众号文章的精确原始 URL；当前仅保留发布方主页。
 - 跟踪千百度公告、交易对价、业绩承诺和本原智数后续财务披露。
 - 将“AI 数据瓶颈研究”与已有 AI 资本开支、第二层受益者卡片连接。
 
 ## Sources
 
-- 原始 inbox 笔记：[[数据是否就是AI世界的未来]]
-- 本地 PDF：[[FireShot Capture 043 - 港股鞋王千百度，一夜完成AI数据公司转型 - [mp.weixin.qq.com].pdf]]
+- 发布方主页：https://www.qbitai.com/
+- 原始微信公众号文章 URL：待补

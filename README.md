@@ -25,9 +25,11 @@ Open `vault/` as an Obsidian vault. Capture freely in `vault/00_inbox`, then str
 Windows PowerShell:
 
 ```powershell
+python scripts\discover.py
 python scripts\knowledge_index.py --check
 python scripts\knowledge_index.py --write-index
 python scripts\knowledge_audit.py
+python -m unittest discover -s tests -v
 ```
 
 macOS/Linux:
@@ -39,6 +41,15 @@ python3 scripts/knowledge_audit.py
 ```
 
 Validation checks structural correctness. Audit surfaces review and staleness work without blocking normal use.
+
+## PDF Text Extraction
+
+```powershell
+python scripts\extract_pdf.py path\to\source.pdf -o extracted.txt
+```
+
+The command uses a supported environment provider or project `.deps/pypdf`.
+If the PDF contains only scanned images, run OCR before ingestion.
 
 ## Local Web UI
 

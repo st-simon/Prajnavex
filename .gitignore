@@ -4,6 +4,7 @@ vault/.obsidian/cache/
 vault/.obsidian/plugins/*/data.json
 vault/assets/tmp/
 vault/assets/source-pdfs/
+vault/**/*.pdf
 vault/00_inbox/imported-from-initial-vault/
 *.log
 __pycache__/

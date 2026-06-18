@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Added single-call, read-only project discovery with command-scoped Git trust.
+- Added deterministic PDF text extraction using environment or project-local providers.
+- Documented recurring Git, PDF, and sandbox handling for agent sessions.
 - Added v0.2 roadmap for schema integrity, staleness audit, and portable execution.
 - Strengthened knowledge index validation with enum, date, type-directory, duplicate ID, and link checks.
 - Added bidirectional backlink output to the generated knowledge index.
