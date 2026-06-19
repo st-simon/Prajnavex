@@ -75,9 +75,12 @@ def discover():
         "git": git_status(),
         "pdf": {
             "providers": providers,
+            "status": "ready" if providers else "install-required",
             "asset_dir": "vault/assets/source-pdfs",
             "extract_command": "python scripts/extract_pdf.py <pdf>",
-            "fallback": "Use OCR when no provider exists or extracted text is empty.",
+            "install_command": "python scripts/setup_pdf_deps.py",
+            "dependency_file": "requirements.txt",
+            "fallback": "Use OCR when extracted text is empty.",
         },
         "vault": vault_layout(),
         "templates": template_state(),
@@ -100,6 +103,8 @@ def render(report):
             ", ".join(f"{p['module']} ({p['source']})" for p in providers)
             if providers else "none"
         ),
+        f"pdf_status: {report['pdf']['status']}",
+        f"pdf_setup: {report['pdf']['install_command']}",
         f"schema: {report['schema']}",
         f"vault_rules: {report['vault_rules']}",
         f"index_exists: {report['index_exists']}",

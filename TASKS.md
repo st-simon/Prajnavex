@@ -14,8 +14,9 @@ Done criteria:
 
 ## Next
 
-- Add the first bundle note with input/output contract fields.
-- Add semantic duplicate detection after the structural validator is stable.
+- Commit, tag, and release the verified v0.2 changes after explicit approval.
+- After v0.2 verification, begin the approved v0.3 guided Source/Card drafting
+  workflow with advisory semantic duplicate detection.
 
 ## Completed
 
@@ -30,10 +31,18 @@ Done criteria:
 - Started v0.2 integrity and audit workstream.
 - Backfilled audit fields on existing sources, cards, and skills.
 - Resolved the duplicate coffee infographic source by archiving the early test source and moving card links to the canonical source.
+- Added pinned, project-local PDF dependency setup and verified real text
+  extraction on macOS without modifying system Python.
+- Added the first real Bundle with input/output contracts and verified its
+  bundle-to-workflow draft.
+- Verified the complete v0.2 operating model with clean validation, audit, and
+  unit tests.
 
 ## Known Gaps
 
 - No browser capture extension is wired yet.
 - No embedding or semantic search index exists yet.
+- Guided Source/Card drafting and semantic duplicate detection are approved for
+  v0.3 but intentionally not started before v0.2 verification.
 - No direct Obsidian plugin dependency has been selected.
 - Audit is clean on the current vault; future warnings should be treated as review work.

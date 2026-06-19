@@ -26,6 +26,8 @@ Windows PowerShell:
 
 ```powershell
 python scripts\discover.py
+python scripts\setup_pdf_deps.py
+python scripts\setup_pdf_deps.py --check
 python scripts\knowledge_index.py --check
 python scripts\knowledge_index.py --write-index
 python scripts\knowledge_audit.py
@@ -35,20 +37,41 @@ python -m unittest discover -s tests -v
 macOS/Linux:
 
 ```bash
+python3 scripts/setup_pdf_deps.py
+python3 scripts/setup_pdf_deps.py --check
 python3 scripts/knowledge_index.py --check
 python3 scripts/knowledge_index.py --write-index
 python3 scripts/knowledge_audit.py
+python3 -m unittest discover -s tests -v
 ```
 
 Validation checks structural correctness. Audit surfaces review and staleness work without blocking normal use.
 
 ## PDF Text Extraction
 
+Install the pinned PDF dependency into the project-local `.deps` directory:
+
+```powershell
+python scripts\setup_pdf_deps.py
+python scripts\setup_pdf_deps.py --check
+```
+
+macOS/Linux:
+
+```bash
+python3 scripts/setup_pdf_deps.py
+python3 scripts/setup_pdf_deps.py --check
+```
+
+Then extract a text PDF:
+
 ```powershell
 python scripts\extract_pdf.py path\to\source.pdf -o extracted.txt
 ```
 
-The command uses a supported environment provider or project `.deps/pypdf`.
+The setup command installs the version pinned in `requirements.txt` without
+modifying the system Python environment. Extraction prefers project
+`.deps/pypdf` or another supported environment provider.
 If the PDF contains only scanned images, run OCR before ingestion.
 
 ## Local Web UI

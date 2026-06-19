@@ -6,11 +6,25 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from knowledge_audit import audit_records
+from bundle_tool_draft import render_draft
 from knowledge_index import build_backlinks, parse_value, validate_records
 from prajnavex_web import api_status
 
 
 class KnowledgeIndexTests(unittest.TestCase):
+    def test_bundle_draft_includes_contract_and_skills(self):
+        draft = render_draft({
+            "id": "bundle-x",
+            "title": "Research workflow",
+            "input_contract": "Company and market evidence.",
+            "output_contract": "A thesis and risk checklist.",
+            "skills": ["skill-a", "skill-b"],
+        })
+        self.assertIn("Company and market evidence.", draft)
+        self.assertIn("A thesis and risk checklist.", draft)
+        self.assertIn("`skill-a`", draft)
+        self.assertIn("`skill-b`", draft)
+
     def test_parse_inline_list(self):
         self.assertEqual(parse_value("[a, b, c]"), ["a", "b", "c"])
 

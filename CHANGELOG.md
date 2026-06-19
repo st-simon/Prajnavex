@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Added pinned, project-local PDF dependency setup with readiness checks.
+- Added actionable PDF setup guidance to discovery and extraction failures.
+- Added the first real Bundle and rendered its input/output workflow contract.
 - Added single-call, read-only project discovery with command-scoped Git trust.
 - Added deterministic PDF text extraction using environment or project-local providers.
 - Documented recurring Git, PDF, and sandbox handling for agent sessions.

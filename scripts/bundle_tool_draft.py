@@ -1,6 +1,6 @@
 import argparse
 
-from knowledge_index import build_index, scalar
+from knowledge_index import as_list, build_index, scalar
 
 
 def iter_bundles(records):
@@ -14,6 +14,10 @@ def render_draft(bundle):
     bundle_id = scalar(bundle.get("id"))
     inputs = scalar(bundle.get("input_contract")) or "Describe required inputs."
     outputs = scalar(bundle.get("output_contract")) or "Describe expected outputs."
+    skills = as_list(bundle.get("skills"))
+    skill_lines = [f"- `{skill_id}`" for skill_id in skills]
+    if not skill_lines:
+        skill_lines = ["- No skills linked."]
     return "\n".join([
         f"# Tool Draft: {title}",
         "",
@@ -25,8 +29,11 @@ def render_draft(bundle):
         "## Outputs",
         outputs,
         "",
+        "## Included Skills",
+        *skill_lines,
+        "",
         "## Workflow",
-        "Convert the bundle skills into executable steps before use.",
+        "Run the included skills in the order required by the bundle contract.",
     ])
 
 

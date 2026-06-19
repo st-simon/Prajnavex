@@ -33,6 +33,27 @@ Windows: Start Prajnavex.cmd
 macOS: scripts/start-prajnavex-web.command
 ```
 
+## PDF Dependencies
+
+PDF extraction uses the version pinned in `<project-root>/requirements.txt`.
+Install it into the ignored project-local dependency directory:
+
+```text
+Windows: python scripts\setup_pdf_deps.py
+macOS/Linux: python3 scripts/setup_pdf_deps.py
+```
+
+Check readiness without changing the environment:
+
+```text
+Windows: python scripts\setup_pdf_deps.py --check
+macOS/Linux: python3 scripts/setup_pdf_deps.py --check
+```
+
+The `.deps` directory is a replaceable local adapter and must not be committed.
+Scanned PDFs still require OCR; successful dependency installation does not
+turn image-only pages into text.
+
 ## Git Hygiene
 
 The repository should keep framework code and curated notes. Large raw assets and private captures should stay ignored or outside Git.

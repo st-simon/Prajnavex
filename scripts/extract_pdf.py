@@ -70,7 +70,8 @@ def extract_pdf(path):
                 )
             return provider, pages
     raise ExtractionError(
-        "No supported PDF provider found. Add pypdf to .deps or the environment."
+        "No supported PDF provider found. Run "
+        "`python scripts/setup_pdf_deps.py` from the project root."
     )
 
 
