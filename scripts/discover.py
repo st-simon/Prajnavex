@@ -3,6 +3,7 @@
 import argparse
 import importlib.util
 import json
+import shutil
 import subprocess
 import sys
 from importlib.machinery import PathFinder
@@ -16,6 +17,7 @@ VAULT_DIRS = (
     "40_skills", "50_bundles", "90_archive", "assets",
 )
 PDF_MODULES = ("pypdf", "pdfplumber", "fitz", "PyPDF2")
+MODEL_CONFIG = ROOT / "config" / "model_roles.json"
 
 
 def find_pdf_providers():
@@ -67,6 +69,43 @@ def template_state():
     return {"present": sorted(found), "missing": sorted(expected - found)}
 
 
+def model_state():
+    if not MODEL_CONFIG.is_file():
+        return {"configured": False, "server": False, "models": [], "roles": {}}
+    config = json.loads(MODEL_CONFIG.read_text(encoding="utf-8"))
+    if not shutil.which("ollama"):
+        return {
+            "configured": True,
+            "server": False,
+            "models": [],
+            "roles": config.get("roles", {}),
+            "error": "ollama CLI not found",
+        }
+    try:
+        result = subprocess.run(
+            ["ollama", "list"], capture_output=True, text=True, timeout=10
+        )
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        return {
+            "configured": True,
+            "server": False,
+            "models": [],
+            "roles": config.get("roles", {}),
+            "error": str(exc),
+        }
+    models = [
+        line.split()[0] for line in result.stdout.splitlines()[1:]
+        if line.strip()
+    ]
+    return {
+        "configured": True,
+        "server": result.returncode == 0,
+        "models": models,
+        "roles": config.get("roles", {}),
+        "error": result.stderr.strip() or None,
+    }
+
+
 def discover():
     providers = find_pdf_providers()
     return {
@@ -84,6 +123,7 @@ def discover():
         },
         "vault": vault_layout(),
         "templates": template_state(),
+        "models": model_state(),
         "schema": "docs/schema.md",
         "vault_rules": "vault/_README.md",
         "index_exists": (ROOT / "index" / "knowledge-index.json").exists(),
@@ -111,6 +151,17 @@ def render(report):
     ]
     missing = report["templates"]["missing"]
     lines.append(f"templates_missing: {missing or 'none'}")
+    model_report = report["models"]
+    lines.append(
+        "ollama_status: " + (
+            "ready" if model_report.get("server") else "unavailable"
+        )
+    )
+    lines.append(
+        "ollama_models: " + (
+            ", ".join(model_report.get("models", [])) or "none"
+        )
+    )
     return "\n".join(lines)
 
 

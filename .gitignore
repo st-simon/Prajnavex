@@ -6,6 +6,8 @@ vault/assets/tmp/
 vault/assets/source-pdfs/
 vault/**/*.pdf
 vault/00_inbox/imported-from-initial-vault/
+vault/00_inbox/_extracted/
+logs/
 *.log
 __pycache__/
 .pytest_cache/

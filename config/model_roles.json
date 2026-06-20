@@ -1,0 +1,15 @@
+{
+  "provider": "ollama",
+  "base_url": "http://127.0.0.1:11434",
+  "roles": {
+    "fast": "qwen35-fast:latest",
+    "general": "qwen3.5:9b",
+    "reasoner": "qwen3.5:9b"
+  },
+  "fallback_roles": {
+    "reasoner": "general",
+    "general": "fast"
+  },
+  "timeout_seconds": 180,
+  "temperature": 0
+}

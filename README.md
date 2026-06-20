@@ -74,6 +74,44 @@ modifying the system Python environment. Extraction prefers project
 `.deps/pypdf` or another supported environment provider.
 If the PDF contains only scanned images, run OCR before ingestion.
 
+## Guided Document Ingestion
+
+Create a Source draft, Card candidates, evidence links, and advisory semantic
+duplicate warnings:
+
+```powershell
+python scripts\ingest_document.py ingest path\to\document.pdf
+```
+
+```bash
+python3 scripts/ingest_document.py ingest path/to/document.pdf
+```
+
+If Ollama is unavailable, the command preserves the extracted evidence and
+creates a text-only Source draft with Card generation marked pending.
+
+Review drafts under:
+
+```text
+vault/00_inbox/_source_drafts
+vault/00_inbox/_card_drafts
+```
+
+Validate draft structure and evidence links:
+
+```bash
+python3 scripts/ingest_document.py validate
+```
+
+Approve the Source before approving its Cards:
+
+```bash
+python3 scripts/ingest_document.py approve-source <source-draft>
+python3 scripts/ingest_document.py approve-card <card-draft>
+```
+
+No draft is promoted automatically.
+
 ## Local Web UI
 
 Windows PowerShell:

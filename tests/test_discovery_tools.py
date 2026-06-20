@@ -54,6 +54,8 @@ class DiscoveryTests(unittest.TestCase):
         self.assertEqual(
             report["pdf"]["install_command"], "python scripts/setup_pdf_deps.py"
         )
+        self.assertIn("models", report)
+        self.assertTrue(report["models"]["configured"])
 
 
 class PdfExtractionTests(unittest.TestCase):

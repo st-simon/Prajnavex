@@ -1,0 +1,46 @@
+{
+  "source": {
+    "title": "Human-reviewed knowledge drafting",
+    "summary": "A reliable knowledge pipeline separates automated extraction and drafting from explicit human approval.",
+    "author": "",
+    "tags": ["knowledge-management", "human-review", "quality-control"],
+    "why_save": "It defines a practical boundary between useful automation and stable knowledge.",
+    "useful_ideas": [
+      "Automation proposes and humans approve.",
+      "Each Card should contain one reusable idea.",
+      "Semantic similarity should inform review without forcing a merge."
+    ]
+  },
+  "cards": [
+    {
+      "title": "Automation proposes and humans approve stable knowledge",
+      "summary": "Automated extraction can prepare drafts, but promotion requires human verification against evidence.",
+      "tags": ["human-review", "knowledge-quality"],
+      "core_idea": "Separate machine drafting from human commitment to protect the stable knowledge layer.",
+      "when_useful": "Use when designing ingestion or note-promotion workflows.",
+      "how_to_apply": [
+        "Keep generated outputs in a draft area.",
+        "Require evidence review before promotion."
+      ],
+      "evidence_excerpt": "a human reviewer must verify the claims against the original evidence before promotion",
+      "evidence_location": "paragraph 1",
+      "confidence": "high",
+      "promotable": true
+    },
+    {
+      "title": "One knowledge Card should express one reusable idea",
+      "summary": "Atomic Cards are easier to retrieve, verify, and update than Cards containing unrelated claims.",
+      "tags": ["knowledge-cards", "atomic-notes"],
+      "core_idea": "Card boundaries should follow one reusable claim or procedure.",
+      "when_useful": "Use while splitting a source into reusable knowledge.",
+      "how_to_apply": [
+        "Identify the central reusable claim.",
+        "Move unrelated claims into separate Card candidates."
+      ],
+      "evidence_excerpt": "Each knowledge card should express one reusable idea.",
+      "evidence_location": "paragraph 2",
+      "confidence": "high",
+      "promotable": false
+    }
+  ]
+}

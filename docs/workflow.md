@@ -10,7 +10,18 @@ Move only useful items into `vault/10_sources`. Add `source.md` frontmatter befo
 
 ## Extract
 
-Create one or more cards in `vault/20_cards`. Each card should contain one reusable idea, method, warning, or pattern.
+For PDF, Markdown, and text documents, use the guided draft command:
+
+```text
+python scripts/ingest_document.py ingest <document>
+```
+
+Review the Source and Card drafts in `vault/00_inbox`. Each Card should contain
+one reusable idea, method, warning, or pattern. Semantic duplicate results are
+review hints, not merge decisions.
+
+Approve the Source first, then explicitly approve selected Cards into
+`vault/20_cards`.
 
 ## Promote
 

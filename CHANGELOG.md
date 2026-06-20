@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- Added guided PDF/Markdown/text ingestion into reviewable Source and Card drafts.
+- Added local Ollama role configuration, structured-output logging, and safe
+  text-only fallback.
+- Added advisory semantic duplicate detection with no automatic merging.
+- Added explicit Source/Card approval gates, draft validation, and golden
+  regression fixtures.
 - Added pinned, project-local PDF dependency setup with readiness checks.
 - Added actionable PDF setup guidance to discovery and extraction failures.
 - Added the first real Bundle and rendered its input/output workflow contract.

@@ -1,8 +1,11 @@
 # Prajnavex v0.3 Guided Source and Card Drafting
 
-Status: approved
+Status: verified
+
+Release status: verified-uncommitted
 
 Approved: 2026-06-20
+Started: 2026-06-20
 Start condition: Prajnavex v0.2 is verified.
 
 ## Goal
@@ -33,3 +36,15 @@ human-approved workflow.
 - Each Card candidate traces to its Source and supporting evidence.
 - Duplicate detection produces warnings without silently merging content.
 - Existing golden examples do not materially regress.
+
+## Verification
+
+Verified on 2026-06-20 with a real text PDF and local Ollama:
+
+- Source and Card drafts were generated with evidence links.
+- Draft structure validation reported zero errors.
+- Semantic duplicate detection identified a Chinese paraphrase of an existing
+  Card as a high-confidence duplicate.
+- Source approval is enforced before Card approval.
+- Model failure preserves a text-only Source draft.
+- Knowledge validation and audit remain clean; all 23 tests pass.

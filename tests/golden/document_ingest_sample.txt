@@ -1,0 +1,10 @@
+A reliable knowledge pipeline separates extraction from approval. Automated
+systems may propose a source summary and candidate knowledge cards, but a human
+reviewer must verify the claims against the original evidence before promotion.
+
+Each knowledge card should express one reusable idea. Cards that combine
+several unrelated claims are difficult to retrieve, validate, and update.
+
+Before creating a new card, the pipeline should compare its meaning with
+existing cards. Similarity is advisory: the reviewer decides whether the new
+card is a duplicate, an extension, or merely related context.

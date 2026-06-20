@@ -14,9 +14,9 @@ Done criteria:
 
 ## Next
 
-- Commit, tag, and release the verified v0.2 changes after explicit approval.
-- After v0.2 verification, begin the approved v0.3 guided Source/Card drafting
-  workflow with advisory semantic duplicate detection.
+- Review and commit the verified v0.3 guided Source/Card drafting workflow.
+- After CLI adoption, decide whether draft review actions belong in the local
+  Web UI.
 
 ## Completed
 
@@ -37,12 +37,17 @@ Done criteria:
   bundle-to-workflow draft.
 - Verified the complete v0.2 operating model with clean validation, audit, and
   unit tests.
+- Added a formal document ingestion command that creates Source drafts, atomic
+  Card candidates, evidence links, and advisory semantic duplicate warnings.
+- Added explicit Source-before-Card approval gates and model-failure fallback.
+- Verified v0.3 against a real generated text PDF and a real semantic duplicate
+  comparison using the local Ollama models.
 
 ## Known Gaps
 
 - No browser capture extension is wired yet.
 - No embedding or semantic search index exists yet.
 - Guided Source/Card drafting and semantic duplicate detection are approved for
-  v0.3 but intentionally not started before v0.2 verification.
+  v0.3 and implemented on the current branch.
 - No direct Obsidian plugin dependency has been selected.
 - Audit is clean on the current vault; future warnings should be treated as review work.

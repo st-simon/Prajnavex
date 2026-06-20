@@ -30,6 +30,31 @@ Allowed stage values are type-specific:
 
 The frontmatter exists for indexing. The Markdown body exists for reading and editing.
 
+## Inbox Draft Review
+
+Document ingestion drafts live outside the stable index:
+
+```text
+vault/00_inbox/_source_drafts
+vault/00_inbox/_card_drafts
+```
+
+Drafts use the normal Source/Card schema plus:
+
+- `review_status`: `needs-human-review`, `needs-rework`, `rejected`, or
+  `approved`.
+- `ingest_status` on Sources: `text-only`, `pending-model`, or
+  `semantic-draft`.
+- `duplicate_candidates` on Cards: advisory existing Card IDs.
+- `local_evidence` on Sources: ignored extracted text used during review.
+
+A Source draft uses `stage: source-draft`. A Card draft uses the intended
+stable stage (`extracted` or `promotable`) but is not indexed until explicitly
+approved into `vault/20_cards`.
+
+Approving a Card requires its Source to exist in `vault/10_sources`. Approval
+adds the Card ID to the Source's `related_cards` field.
+
 ## Link Fields
 
 These fields must resolve to existing note `id` values:
