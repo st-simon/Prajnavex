@@ -1,8 +1,8 @@
 # Prajnavex v0.3 Guided Source and Card Drafting
 
-Status: verified
+Status: archived
 
-Release status: verified-uncommitted
+Release status: released in 0.3.0 on 2026-07-09
 
 Approved: 2026-06-20
 Started: 2026-06-20

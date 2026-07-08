@@ -14,7 +14,8 @@ Done criteria:
 
 ## Next
 
-- Review and commit the verified v0.3 guided Source/Card drafting workflow.
+- Start v0.4 Knowledge API Kernel design and implementation from
+  `docs/v0.4-v0.6-roadmap.md`.
 - Use `docs/v0.4-v0.6-roadmap.md` as the next architecture direction:
   v0.4 Knowledge API Kernel, v0.5 Model Connector Layer, and v0.6 Knowledge
   Reuse Protocol.
@@ -46,6 +47,8 @@ Done criteria:
 - Added explicit Source-before-Card approval gates and model-failure fallback.
 - Verified v0.3 against a real generated text PDF and a real semantic duplicate
   comparison using the local Ollama models.
+- Released the cumulative v0.3.0 baseline, including v0.2 integrity/audit work,
+  v0.3 guided Source/Card drafting, and the model-neutral v0.4-v0.6 roadmap.
 
 ## Known Gaps
 
@@ -54,7 +57,5 @@ Done criteria:
 - No stable Knowledge API Kernel exists yet.
 - No Codex/Claude/model connector layer exists yet.
 - No standardized context-pack protocol exists yet.
-- Guided Source/Card drafting and semantic duplicate detection are approved for
-  v0.3 and implemented on the current branch.
 - No direct Obsidian plugin dependency has been selected.
 - Audit is clean on the current vault; future warnings should be treated as review work.

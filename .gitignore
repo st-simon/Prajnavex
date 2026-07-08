@@ -1,4 +1,5 @@
 index/
+.DS_Store
 vault/.obsidian/workspace*.json
 vault/.obsidian/cache/
 vault/.obsidian/plugins/*/data.json

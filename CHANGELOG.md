@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 0.3.0 - 2026-07-09
+
 - Added guided PDF/Markdown/text ingestion into reviewable Source and Card drafts.
 - Added local Ollama role configuration, structured-output logging, and safe
   text-only fallback.
