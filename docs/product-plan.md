@@ -2,7 +2,9 @@
 
 ## Product Shape
 
-Prajnavex is a local knowledge workbench for turning messy reading material into structured sources, cards, synthesis notes, and skills.
+Prajnavex is a local-first, model-neutral knowledge core for turning messy
+reading material into structured sources, cards, skills, bundles, and reusable
+context packs.
 
 Subtitle: A structured knowledge base for clear seeing.
 
@@ -12,6 +14,18 @@ Chinese subtitle: 以般若照见，以结构成维
 
 Move daily interaction from ad hoc Codex chat commands toward a local web UI that exposes the review workflow directly.
 
+## Next Product Direction
+
+The next architecture phase moves Prajnavex from a local vault plus scripts to
+an independent knowledge core with clients:
+
+```text
+Prajnavex Core -> API Kernel -> Model Connectors -> Reuse Protocol
+```
+
+Codex, Claude, Obsidian, the Web UI, and CLI tools should connect through
+stable contracts rather than each making direct assumptions about vault files.
+
 ## Core Workflows
 
 1. Review inbox materials.
@@ -19,6 +33,7 @@ Move daily interaction from ad hoc Codex chat commands toward a local web UI tha
 3. Review and approve source drafts.
 4. Browse indexed sources, cards, and skills.
 5. Inspect source/card metadata before deeper editing in Obsidian.
+6. Retrieve bounded context packs for model clients and workflow reuse.
 
 ## Non-goals
 
@@ -26,6 +41,7 @@ Move daily interaction from ad hoc Codex chat commands toward a local web UI tha
 - No autonomous writes into active sources or skills without review.
 - No cloud sync or user accounts.
 - No investment advice engine.
+- No model-specific structure in the Prajnavex core.
 
 ## MVP UI
 
@@ -42,7 +58,12 @@ Move daily interaction from ad hoc Codex chat commands toward a local web UI tha
 - Static HTML/CSS/JavaScript frontend.
 - Markdown vault remains the source of truth.
 - Existing scripts remain the automation layer.
-- Obsidian remains the main editor.
+- Obsidian remains the human workbench for reading, editing, linking, and
+  review.
+- The Web UI and CLI are operational clients.
+- Codex, Claude, and other assistants are model clients.
+- v0.4 prioritizes a Knowledge API Kernel before expanding model-specific
+  integrations.
 
 ## Done Criteria
 

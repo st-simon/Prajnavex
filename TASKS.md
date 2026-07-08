@@ -15,8 +15,12 @@ Done criteria:
 ## Next
 
 - Review and commit the verified v0.3 guided Source/Card drafting workflow.
-- After CLI adoption, decide whether draft review actions belong in the local
-  Web UI.
+- Use `docs/v0.4-v0.6-roadmap.md` as the next architecture direction:
+  v0.4 Knowledge API Kernel, v0.5 Model Connector Layer, and v0.6 Knowledge
+  Reuse Protocol.
+- For v0.4, keep the current vault folders stable while adding recall stages,
+  maturity signals, usage signals, and bounded context-pack exports through
+  frontmatter, index data, and API behavior.
 
 ## Completed
 
@@ -47,6 +51,9 @@ Done criteria:
 
 - No browser capture extension is wired yet.
 - No embedding or semantic search index exists yet.
+- No stable Knowledge API Kernel exists yet.
+- No Codex/Claude/model connector layer exists yet.
+- No standardized context-pack protocol exists yet.
 - Guided Source/Card drafting and semantic duplicate detection are approved for
   v0.3 and implemented on the current branch.
 - No direct Obsidian plugin dependency has been selected.

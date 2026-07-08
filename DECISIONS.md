@@ -46,3 +46,59 @@ Cleaned Text -> reviewed usable knowledge
 ```
 
 OCR is not the primary knowledge extraction layer for screenshots, information graphics, slides, charts, tables, or social posts. For those image types, use `vision-first` or `hybrid` extraction and require human approval before source indexing.
+
+## 2026-07-08: Prajnavex Is A Model-Neutral Knowledge Core
+
+Status: accepted
+
+Prajnavex should evolve as an independent, structured knowledge core rather
+than as an attachment to one assistant, editor, or chat surface.
+
+The core owns:
+
+- the Markdown vault and frontmatter schema;
+- validation, indexing, and audit rules;
+- knowledge lifecycle state;
+- local APIs for ingestion, retrieval, review, and export;
+- recall and context-pack contracts for external clients.
+
+Client roles are separate:
+
+- Obsidian is the human workbench for reading, editing, linking, judgment, and
+  review.
+- Codex, Claude, and other models are model clients for ingestion,
+  transformation, reasoning, and reuse.
+- The Web UI and CLI are operational clients for review flows, batch actions,
+  and local automation.
+
+Rationale:
+
+- A model-neutral core allows multi-channel knowledge ingestion.
+- Stable APIs and context contracts allow multi-channel knowledge reuse.
+- Obsidian remains valuable as the human operation window without becoming the
+  system foundation.
+
+## 2026-07-08: Recall And Context Contracts Shape v0.4+
+
+Status: accepted
+
+Use the referenced IT knowledge-system structure as inspiration for
+Prajnavex's next architecture layer, but do not copy its client-specific
+folder model.
+
+Adopt the concepts:
+
+- `surface`: lightweight records safe to show at session start or in menus.
+- `trigger`: records recommended when task keywords, tags, or scenarios match.
+- `load`: full note bodies, evidence, or workflow packs read only on demand.
+- `maturity`: review and reuse readiness beyond physical folder location.
+- `usage`: signals that show which knowledge is actually recalled or applied.
+
+Keep the current vault folders stable:
+
+```text
+00_inbox -> 10_sources -> 20_cards -> 40_skills -> 50_bundles
+```
+
+Express the new structure through frontmatter, index data, API behavior, and
+context-pack contracts before considering any physical directory migration.
