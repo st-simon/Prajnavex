@@ -102,3 +102,25 @@ Keep the current vault folders stable:
 
 Express the new structure through frontmatter, index data, API behavior, and
 context-pack contracts before considering any physical directory migration.
+
+## 2026-07-26: One Knowledge Core, Two Consumers
+
+Status: accepted
+
+Prajnavex serves both human and agent consumers from one Markdown/frontmatter
+knowledge core. Obsidian and the Web UI optimize for reading, editing,
+linking, review, and approval. Codex, Claude, and other agents use
+frontmatter-first recall and bounded context packs for retrieval, citation,
+and task application.
+
+Agent clients must receive stable IDs, provenance, confidence, staleness, and
+citation metadata. A context pack is read-only: it cannot promote, merge,
+delete, or rewrite knowledge. Authority paths remain stronger than derived
+Cards, Skills, or Bundles.
+
+Rationale:
+
+- One source of truth prevents divergence between human and agent libraries.
+- Bounded packs reduce context waste and accidental exposure of raw Vault data.
+- Explicit provenance makes agent reuse auditable.
+- Human approval remains the boundary for durable knowledge changes.

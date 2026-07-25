@@ -16,6 +16,12 @@ staleness: unknown
 usefulness: medium
 actionability: reference
 promotable: false
+domain: ""
+applicability: ""
+authority: derived
+authority_path: ""
+evidence: []
+allowed_consumers: [human, agent]
 ---
 
 # Title

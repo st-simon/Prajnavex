@@ -30,6 +30,23 @@ Allowed stage values are type-specific:
 
 The frontmatter exists for indexing. The Markdown body exists for reading and editing.
 
+## Dual Consumer Metadata
+
+Prajnavex has one knowledge core and two consumers: human workbenches and
+agent clients. The following optional fields help agents recall and cite notes
+without changing the required lifecycle schema:
+
+- `domain`: bounded knowledge area, such as `codex-governance`.
+- `applicability`: task or scenario where the note may be used.
+- `authority`: `workspace`, `project`, `source`, or `derived`.
+- `authority_path`: path to the authoritative rule or source.
+- `evidence`: concise evidence locators or references.
+- `allowed_consumers`: `human`, `agent`, or both.
+
+Agent clients should search frontmatter first and request a bounded context
+pack. They should not read the whole Vault or treat a derived Card as stronger
+than its authority path.
+
 ## Inbox Draft Review
 
 Document ingestion drafts live outside the stable index:

@@ -22,6 +22,9 @@ Done criteria:
 - For v0.4, keep the current vault folders stable while adding recall stages,
   maturity signals, usage signals, and bounded context-pack exports through
   frontmatter, index data, and API behavior.
+- Implemented the first local read-only Knowledge API Kernel with `search`,
+  `get`, `context_pack`, and `cite`; use it as the seam for future Codex,
+  HTTP, and MCP adapters.
 
 ## Completed
 
@@ -54,8 +57,6 @@ Done criteria:
 
 - No browser capture extension is wired yet.
 - No embedding or semantic search index exists yet.
-- No stable Knowledge API Kernel exists yet.
 - No Codex/Claude/model connector layer exists yet.
-- No standardized context-pack protocol exists yet.
 - No direct Obsidian plugin dependency has been selected.
 - Audit is clean on the current vault; future warnings should be treated as review work.

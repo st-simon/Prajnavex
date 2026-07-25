@@ -45,6 +45,29 @@ python3 scripts/knowledge_audit.py
 python3 -m unittest discover -s tests -v
 ```
 
+## Agent Context Packs
+
+Prajnavex serves human and agent clients from the same Markdown/frontmatter
+knowledge core. Agents should use the bounded, read-only context-pack adapter
+instead of reading the whole Vault:
+
+```bash
+python3 scripts/context_pack.py --query "coding" --type card --limit 5
+```
+
+The pack includes stable IDs, bounded note bodies, provenance, confidence,
+staleness, and citation metadata. See [docs/context-pack-contract.md](docs/context-pack-contract.md).
+
+The local Knowledge API Kernel exposes the same read-only contract to CLI or
+future adapters:
+
+```bash
+python3 scripts/knowledge_api.py search --query "coding" --type card
+python3 scripts/knowledge_api.py get card-20260726-prajnavex-dual-consumer-model --metadata-only
+python3 scripts/knowledge_api.py context-pack --query "dual consumer" --type card
+python3 scripts/knowledge_api.py cite card-20260726-prajnavex-dual-consumer-model
+```
+
 Validation checks structural correctness. Audit surfaces review and staleness work without blocking normal use.
 
 ## PDF Text Extraction

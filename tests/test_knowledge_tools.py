@@ -8,6 +8,8 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from knowledge_audit import audit_records
 from bundle_tool_draft import render_draft
 from knowledge_index import build_backlinks, parse_value, validate_records
+from context_pack import build_context_pack
+from knowledge_api import cite, context_pack, get, search
 from prajnavex_web import api_status
 
 
@@ -62,6 +64,27 @@ class KnowledgeIndexTests(unittest.TestCase):
         self.assertIn("errors", status)
         self.assertIn("warnings", status)
 
+    def test_context_pack_is_bounded_and_citable(self):
+        pack = build_context_pack("coding agent", note_type="card", limit=2)
+        self.assertEqual(pack["recall"]["strategy"], "frontmatter-first")
+        self.assertLessEqual(len(pack["items"]), 2)
+        if pack["items"]:
+            item = pack["items"][0]
+            self.assertIn("citation", item)
+            self.assertIn("id", item["citation"])
+            self.assertLessEqual(len(item["body"]), 4000)
+
+    def test_knowledge_api_supports_search_get_and_cite(self):
+        result = search("dual consumer", note_type="card", limit=3)
+        self.assertEqual(result["records"][0]["id"], "card-20260726-prajnavex-dual-consumer-model")
+        note = get(result["records"][0]["id"], include_body=False)
+        self.assertNotIn("body", note)
+        citation = cite(note["id"])
+        self.assertEqual(citation["authority_path"], "DECISIONS.md")
+
+    def test_knowledge_api_context_pack_marks_agent_consumer(self):
+        pack = context_pack("dual consumer", note_type="card", limit=1)
+        self.assertEqual(pack["consumer"], "agent")
 
 if __name__ == "__main__":
     unittest.main()
