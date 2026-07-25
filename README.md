@@ -68,6 +68,13 @@ python3 scripts/knowledge_api.py context-pack --query "dual consumer" --type car
 python3 scripts/knowledge_api.py cite card-20260726-prajnavex-dual-consumer-model
 ```
 
+## AI Collaboration Governance Domain
+
+Prajnavex contains an `ai-collaboration-governance` knowledge domain for
+principles, rules, permissions, workflows, Agent roles, experience, audit,
+and upgrades across AI-assisted work. It is a knowledge and reuse layer, not
+the workspace governance authority. Codex governance is its first subdomain.
+
 Validation checks structural correctness. Audit surfaces review and staleness work without blocking normal use.
 
 ## PDF Text Extraction

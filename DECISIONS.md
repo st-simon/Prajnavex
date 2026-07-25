@@ -124,3 +124,28 @@ Rationale:
 - Bounded packs reduce context waste and accidental exposure of raw Vault data.
 - Explicit provenance makes agent reuse auditable.
 - Human approval remains the boundary for durable knowledge changes.
+
+## 2026-07-26: AI Collaboration Governance Domain
+
+Status: accepted
+
+Prajnavex contains an `ai-collaboration-governance` knowledge domain. It
+organizes the principles, rules, permissions, workflows, agent roles,
+experience, audit, and upgrade knowledge used across AI-assisted work.
+
+This domain is not the workspace governance authority. The workspace
+governance repository and its project/workspace rule files remain the
+authoritative execution layer. Prajnavex records, explains, indexes, cites,
+and packages that governance knowledge for human and agent consumers.
+
+Codex governance is the first and currently most complete subdomain. Codex,
+Claude, and other agents are represented as roles or clients within the wider
+AI collaboration model rather than as the owner of the whole domain.
+
+Rationale:
+
+- A model-neutral name remains valid as more agents and tools are added.
+- Separating authority from knowledge prevents policy drift and duplicate rule
+  ownership.
+- Distinguishing normative rules from descriptive knowledge and experience
+  makes review and promotion safer.

@@ -43,6 +43,10 @@ Done criteria:
   extraction on macOS without modifying system Python.
 - Added the first real Bundle with input/output contracts and verified its
   bundle-to-workflow draft.
+- Added the `ai-collaboration-governance` knowledge domain with its charter,
+  governance map, two draft governance Skills, and the first Codex governance
+  subdomain covering intake, Proposal/routing, coding/verification, and
+  publish/closeout.
 - Verified the complete v0.2 operating model with clean validation, audit, and
   unit tests.
 - Added a formal document ingestion command that creates Source drafts, atomic
