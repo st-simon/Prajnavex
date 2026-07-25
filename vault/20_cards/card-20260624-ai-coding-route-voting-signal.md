@@ -7,9 +7,9 @@ tags: [ai, coding-agent, product-strategy, market-signal, route-voting]
 stage: extracted
 source_id: "source-20260624-ai-coding-host-layer-descent-infographics"
 created: 2026-06-24
-updated: 2026-06-24
-last_verified: 2026-06-24
-review_after: 2026-07-24
+updated: 2026-07-26
+last_verified: 2026-07-26
+review_after: 2026-08-26
 confidence: medium
 staleness: watch
 usefulness: medium
@@ -42,3 +42,12 @@ promotable: false
 ## Source
 
 [[source-20260624-ai-coding-host-layer-descent-infographics]]
+
+## Review 2026-07-26
+
+保留为研究假设，未升级置信度。Cursor 已公开讨论从代码编辑器向更广泛 agent 工作流扩展，Anthropic 也持续推进 Claude Code 的终端、编辑器和自主运行能力；这些材料支持“路线投票”作为观察框架，但不足以证明任何单一宿主层已经成为确定赢家。
+
+复查证据：
+
+- https://cursor.com/blog/third-era
+- https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously

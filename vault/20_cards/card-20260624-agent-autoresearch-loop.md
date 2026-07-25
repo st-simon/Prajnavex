@@ -7,9 +7,9 @@ tags: [ai, coding-agent, autoresearch, feedback-loop, product-strategy]
 stage: promotable
 source_id: "source-20260624-ai-coding-host-layer-descent-infographics"
 created: 2026-06-24
-updated: 2026-06-24
-last_verified: 2026-06-24
-review_after: 2026-07-24
+updated: 2026-07-26
+last_verified: 2026-07-26
+review_after: 2026-08-26
 confidence: medium
 staleness: watch
 usefulness: high
@@ -50,3 +50,12 @@ promotable: true
 ## Source
 
 [[source-20260624-ai-coding-host-layer-descent-infographics]]
+
+## Review 2026-07-26
+
+保留为中等置信度的方法判断。官方材料继续显示 coding agent 正在增加自主运行、检查点和反馈闭环能力，但本 Card 的“持续自我改进”仍要求具体目标函数、可观察指标和可回滚环境，不能仅凭产品宣传或一次性自动化宣称已经实现。
+
+复查证据：
+
+- https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously
+- https://arxiv.org/abs/2603.05344

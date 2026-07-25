@@ -10,9 +10,9 @@ inputs: [industry, company, financials, customer-exposure, capex-cycle]
 outputs: [candidate-map, thesis, risk-checklist, research-questions]
 source_cards: [card-20260602-ai-second-layer-beneficiary-map, card-20260602-ai-capex-reversal-risk]
 created: 2026-06-02
-updated: 2026-06-04
-last_verified: 2026-06-04
-review_after: 2026-07-04
+updated: 2026-07-26
+last_verified: 2026-07-26
+review_after: 2026-10-26
 confidence: medium
 staleness: watch
 maturity: experimental
@@ -70,3 +70,7 @@ AI 暴露来源：
 - [[source-20260602-ai-distorting-us-economy-wsj]]
 - [[card-20260602-ai-second-layer-beneficiary-map]]
 - [[card-20260602-ai-capex-reversal-risk]]
+
+## Review 2026-07-26
+
+结构、输入、步骤、输出模板和风险提醒仍然可执行。本次只刷新生命周期字段，未改变研究方法；下一次复查重点是补充数据来源质量和候选公司证据门槛。

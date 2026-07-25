@@ -12,9 +12,9 @@ vision_required: true
 extraction_strategy: hybrid
 review_status: approved
 created: 2026-06-24
-updated: 2026-06-24
-last_verified: 2026-06-24
-review_after: 2026-07-24
+updated: 2026-07-26
+last_verified: 2026-07-26
+review_after: 2026-08-26
 confidence: medium
 staleness: watch
 usefulness: high
@@ -65,6 +65,16 @@ promoted_skills: []
 - 复核附件中的收入、下载、GitHub star 与厂商产品路线。
 - 将“宿主层级下沉”纳入 AI agent 产品研究框架。
 - 观察真正的 OpenClaw 或同类项目是否具备本地权限、长期记忆、IM 入口与任务闭环。
+
+## Review 2026-07-26
+
+本 Source 保留，`confidence: medium`、`staleness: watch` 不变。复查确认“编辑器之外的 agent 工作流、终端/编辑器并存、自主运行和长期记忆”均有近期一手材料支持；但附件中的收入、增长、下载量和 GitHub star 数字没有在本次复查中逐项核验，因此仍只能作为待验证主张，不能作为确定事实引用。
+
+复查证据：
+
+- https://cursor.com/blog/third-era
+- https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously
+- https://github.com/openclaw/openclaw/blob/main/docs/concepts/memory.md
 
 ## Extracted Cards
 

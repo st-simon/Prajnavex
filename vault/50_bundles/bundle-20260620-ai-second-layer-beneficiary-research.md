@@ -7,9 +7,9 @@ tags: [ai, investing, research-workflow, second-order-beneficiaries]
 stage: bundle-draft
 skills: [skill-20260602-ai-second-layer-beneficiary-research]
 created: 2026-06-20
-updated: 2026-06-20
-last_verified: 2026-06-20
-review_after: 2026-07-20
+updated: 2026-07-26
+last_verified: 2026-07-26
+review_after: 2026-10-26
 confidence: medium
 staleness: fresh
 input_contract: "目标行业或市场、候选公司、财务数据、客户暴露、AI 资本开支周期及估值证据。"
@@ -43,3 +43,7 @@ workflow_status: draft
 - 每个研究假设都包含关键指标与反证条件。
 - 输出区分事实、推断与待验证问题。
 - 最终结果包含风险检查清单，且明确声明不构成投资建议。
+
+## Review 2026-07-26
+
+工作流仍能正确组合当前 Skill，目标、流程和完成标准没有发现结构性问题。本次刷新为 `fresh`，未改变 Bundle 阶段或投资研究边界。

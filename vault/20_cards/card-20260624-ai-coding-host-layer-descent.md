@@ -7,9 +7,9 @@ tags: [ai, coding-agent, product-strategy, host-layer]
 stage: promotable
 source_id: "source-20260624-ai-coding-host-layer-descent-infographics"
 created: 2026-06-24
-updated: 2026-06-24
-last_verified: 2026-06-24
-review_after: 2026-07-24
+updated: 2026-07-26
+last_verified: 2026-07-26
+review_after: 2026-08-26
 confidence: medium
 staleness: watch
 usefulness: high
@@ -49,3 +49,13 @@ AI Coding 的竞争不是简单地从“补全更准”进化到“agent 更聪�
 ## Source
 
 [[source-20260624-ai-coding-host-layer-descent-infographics]]
+
+## Review 2026-07-26
+
+保留为中等置信度的分析框架。Cursor 将 agent 工作流扩展到编辑器之外，Claude Code 同时覆盖终端、VS Code 和自主运行，OpenClaw 文档也显示本地记忆与多渠道 agent runtime 已成为可观察形态；但“宿主层越深必然越有价值”仍是待验证推论，不是事实结论。
+
+复查证据：
+
+- https://cursor.com/blog/third-era
+- https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously
+- https://github.com/openclaw/openclaw/blob/main/docs/concepts/memory.md
