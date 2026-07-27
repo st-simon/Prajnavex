@@ -187,4 +187,19 @@ python3 scripts/bundle_tool_draft.py --list
 python3 scripts/bundle_tool_draft.py --bundle-id bundle-YYYYMMDD-slug
 ```
 
+## Git/Vault Boundary
+
+The local Vault may contain raw captures, drafts, attachments, and unreviewed
+notes that remain searchable by Obsidian and local Agent APIs. These are
+ignored by default. Promote reviewed knowledge products explicitly with
+`git add -f` after validation and audit. See
+[docs/git-vault-boundary.md](docs/git-vault-boundary.md).
+
+```bash
+python3 scripts/knowledge_index.py --check
+python3 scripts/knowledge_audit.py
+git add -f vault/20_cards/<reviewed-card>.md
+git diff --cached --name-only
+```
+
 See [docs/portability.md](docs/portability.md) and [PRIVACY.md](PRIVACY.md) before sharing or publishing a vault.

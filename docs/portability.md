@@ -56,4 +56,8 @@ turn image-only pages into text.
 
 ## Git Hygiene
 
-The repository should keep framework code and curated notes. Large raw assets and private captures should stay ignored or outside Git.
+The repository keeps framework code and curated knowledge products. The local
+Vault may contain much more: raw captures, drafts, attachments, and
+unreviewed notes remain searchable by Obsidian and local Agent APIs but are
+ignored by default. Promote reviewed notes explicitly with `git add -f` after
+validation and audit. See [git-vault-boundary.md](git-vault-boundary.md).

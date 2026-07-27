@@ -5,9 +5,30 @@ vault/.obsidian/cache/
 vault/.obsidian/plugins/*/data.json
 vault/assets/tmp/
 vault/assets/source-pdfs/
+vault/assets/source-images/
 vault/**/*.pdf
 vault/00_inbox/imported-from-initial-vault/
 vault/00_inbox/_extracted/
+
+# The Vault is also a local workbench. Raw captures, drafts, and unreviewed
+# stable notes stay local; curated knowledge is promoted explicitly with
+# `git add -f` after review. Tracked legacy notes remain tracked until a
+# deliberate migration removes them from Git.
+vault/00_inbox/*
+!vault/00_inbox/.gitkeep
+vault/10_sources/*
+!vault/10_sources/.gitkeep
+vault/20_cards/*
+!vault/20_cards/.gitkeep
+vault/40_skills/*
+!vault/40_skills/.gitkeep
+vault/50_bundles/*
+!vault/50_bundles/.gitkeep
+vault/90_archive/*
+!vault/90_archive/.gitkeep
+vault/*.base
+vault/*.md
+!vault/_README.md
 logs/
 *.log
 __pycache__/

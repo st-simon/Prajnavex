@@ -170,3 +170,25 @@ second generic status field.
 
 Migration is backward-compatible: templates, validators, indexes, and existing
 Cards are upgraded before expanding the taxonomy across new source material.
+
+## 2026-07-28: Local Vault, Curated Git Boundary
+
+Status: accepted-for-implementation
+
+Prajnavex keeps the complete working Vault available to Obsidian and local
+Agents, but Git stores only the governance framework, system code, and reviewed
+knowledge products. Raw captures, attachments, drafts, archives, and
+unreviewed bulk imports are local-first and ignored by default.
+
+Stable Sources, Cards, Skills, Bundles, and Maps enter Git through an explicit
+promotion gate: validate structure, audit provenance and links, review
+duplicates and sensitivity, then force-add only the approved files. Existing
+tracked notes are not silently untracked by this policy; cleanup is a separate
+decision.
+
+Rationale:
+
+- prevents high-volume ingestion from turning Git history into a raw archive;
+- preserves local human and Agent retrieval over the complete Vault;
+- makes durable knowledge promotion reviewable and reversible;
+- keeps governance and schema changes versioned independently of data volume.

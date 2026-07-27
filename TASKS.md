@@ -50,6 +50,9 @@ Done criteria:
 - Implemented Card System v0.1 backward-compatible fields and migrated all
   current Cards with `card_type`, `sources`, `relations`, `evidence_level`,
   and `epistemic_status` while retaining `source_id` and `related_cards`.
+- Formalized the Local Vault, Curated Git boundary; raw and unreviewed Vault
+  material is local-first, while reviewed knowledge products use an explicit
+  validation, audit, and force-add promotion gate.
 - Verified the complete v0.2 operating model with clean validation, audit, and
   unit tests.
 - Added a formal document ingestion command that creates Source drafts, atomic

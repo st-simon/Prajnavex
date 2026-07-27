@@ -30,6 +30,30 @@ Allowed stage values are type-specific:
 
 The frontmatter exists for indexing. The Markdown body exists for reading and editing.
 
+## Git/Vault Boundary
+
+Prajnavex deliberately separates the complete local Vault from the curated
+Git knowledge set. Obsidian and local Agent clients may search all local
+Sources, Cards, drafts, and attachments. Git stores the governance framework,
+schemas, scripts, and reviewed knowledge products; it does not need to store
+every raw capture or intermediate note.
+
+The default policy is:
+
+- `00_inbox`, attachments, extracted text, archives, and unreviewed notes are
+  local workbench material.
+- `10_sources`, `20_cards`, `40_skills`, and `50_bundles` are local-first
+  knowledge workspaces. A note enters Git only after review, provenance and
+  links are checked, duplicates are resolved, and its scope is stable.
+- Curated notes are promoted explicitly with `git add -f <path>`. This keeps
+  the promotion decision visible and prevents a bulk import from silently
+  expanding the repository.
+
+The operational checklist is maintained in
+`docs/git-vault-boundary.md`. Ignoring a path does not remove already tracked
+files; moving legacy notes from Git to local-only storage is a separate,
+deliberate migration.
+
 ## Dual Consumer Metadata
 
 Prajnavex has one knowledge core and two consumers: human workbenches and
