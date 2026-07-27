@@ -6,6 +6,11 @@ summary: "规则说明应该做什么，权限说明谁可以做，审批条件�
 tags: [ai-collaboration-governance, rules, permissions, approval, least-privilege]
 stage: promotable
 source_id: source-20260726-ai-collaboration-governance-domain
+card_type: concept
+sources: [source-20260726-ai-collaboration-governance-domain]
+relations: {}
+evidence_level: derived
+epistemic_status: working
 created: 2026-07-26
 updated: 2026-07-26
 last_verified: 2026-07-26

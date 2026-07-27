@@ -6,6 +6,11 @@ summary: "治理不是一组孤立规则，而是覆盖 intake、提案、执行
 tags: [ai-collaboration-governance, workflow, lifecycle, review, closeout]
 stage: promotable
 source_id: source-20260726-ai-collaboration-governance-domain
+card_type: method
+sources: [source-20260726-ai-collaboration-governance-domain]
+relations: {}
+evidence_level: derived
+epistemic_status: working
 created: 2026-07-26
 updated: 2026-07-26
 last_verified: 2026-07-26

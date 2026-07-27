@@ -12,7 +12,7 @@ CHECK_DIRS = {"10_sources", "20_cards", "40_skills", "50_bundles"}
 COMMON_REQUIRED = {"id", "type", "title", "summary", "tags", "stage", "created"}
 TYPE_REQUIRED = {
     "source": {"source_type"},
-    "card": {"source_id"},
+    "card": {"source_id", "card_type", "evidence_level", "epistemic_status"},
     "skill": {"source_cards", "maturity"},
     "bundle": {"skills"},
 }
@@ -39,17 +39,44 @@ ENUMS = {
     "ocr_quality": {"low", "medium", "high", "unknown"},
     "extraction_strategy": {"ocr-first", "vision-first", "hybrid"},
     "review_status": {"needs-human-review", "approved", "rejected", "needs-rework"},
+    "card_type": {"entity", "event", "period", "concept", "mechanism", "claim", "work", "comparison", "method"},
+    "entity_kind": {"person", "group", "institution", "place"},
+    "evidence_level": {"direct", "corroborated", "derived", "speculative", "unknown"},
+    "epistemic_status": {"fact", "interpretation", "hypothesis", "method", "question", "working", "uncertain"},
 }
 DATE_FIELDS = {"created", "updated", "last_verified", "review_after"}
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 LINK_FIELDS = {
     "source_id": "source",
+    "sources": "source",
     "related_cards": "card",
     "promoted_skills": "skill",
     "source_cards": "card",
     "skills": "skill",
 }
-LIST_FIELDS = {"tags", "related_cards", "promoted_skills", "source_cards", "skills", "trigger"}
+LIST_FIELDS = {"tags", "related_cards", "promoted_skills", "source_cards", "skills", "trigger", "sources"}
+
+
+def _split_inline(value):
+    parts = []
+    start = 0
+    depth = 0
+    quote = None
+    for index, char in enumerate(value):
+        if quote:
+            if char == quote and (index == 0 or value[index - 1] != "\\"):
+                quote = None
+        elif char in {"'", '"'}:
+            quote = char
+        elif char in "[{":
+            depth += 1
+        elif char in "]}":
+            depth -= 1
+        elif char == "," and depth == 0:
+            parts.append(value[start:index].strip())
+            start = index + 1
+    parts.append(value[start:].strip())
+    return [part for part in parts if part]
 
 
 def parse_value(value):
@@ -58,7 +85,18 @@ def parse_value(value):
         inner = value[1:-1].strip()
         if not inner:
             return []
-        return [parse_value(part) for part in inner.split(",")]
+        return [parse_value(part) for part in _split_inline(inner)]
+    if value.startswith("{") and value.endswith("}"):
+        inner = value[1:-1].strip()
+        if not inner:
+            return {}
+        result = {}
+        for part in _split_inline(inner):
+            if ":" not in part:
+                continue
+            key, nested = part.split(":", 1)
+            result[key.strip().strip("'\"")] = parse_value(nested)
+        return result
     if value.lower() == "true":
         return True
     if value.lower() == "false":
@@ -146,6 +184,7 @@ def validate_record(record, by_id, errors, warnings):
     validate_stage(record, errors)
     validate_enums(record, errors)
     validate_lists(record, warnings)
+    validate_relations(record, by_id, errors, warnings)
     validate_dates(record, errors)
     validate_links(record, by_id, errors)
 
@@ -169,6 +208,23 @@ def validate_lists(record, warnings):
     for field in LIST_FIELDS:
         if field in record and not isinstance(record[field], list):
             warnings.append(f"{record['path']}: {field} should be a list")
+
+
+def validate_relations(record, by_id, errors, warnings):
+    relations = record.get("relations")
+    if relations is None:
+        return
+    if not isinstance(relations, dict):
+        warnings.append(f"{record['path']}: relations should be a map of relation names to note IDs")
+        return
+    for relation_name, target_ids in relations.items():
+        if not isinstance(relation_name, str) or not relation_name.strip():
+            errors.append(f"{record['path']}: relation names must be non-empty strings")
+            continue
+        for target_id in as_list(target_ids):
+            linked_record = by_id.get(str(target_id))
+            if not linked_record:
+                errors.append(f"{record['path']}: relations.{relation_name} references missing id '{target_id}'")
 
 
 def validate_dates(record, errors):
@@ -208,6 +264,11 @@ def build_backlinks(records):
         for field in LINK_FIELDS:
             for target_id in as_list(record.get(field)):
                 backlinks[str(target_id)][bucket].append(source_id)
+        relations = record.get("relations") or {}
+        if isinstance(relations, dict):
+            for target_ids in relations.values():
+                for target_id in as_list(target_ids):
+                    backlinks[str(target_id)][bucket].append(source_id)
     return {key: value for key, value in sorted(backlinks.items())}
 
 

@@ -7,6 +7,11 @@ tags: [ai, labor-market, sentiment, inequality]
 stage: extracted
 source_id: "source-20260602-ai-distorting-us-economy-wsj"
 source_url: "https://cn.wsj.com/articles/ai-is-distorting-practically-everything-about-the-economy-8c9d8a1a"
+card_type: concept
+sources: [source-20260602-ai-distorting-us-economy-wsj]
+relations: {}
+evidence_level: derived
+epistemic_status: working
 created: 2026-06-02
 updated: 2026-06-04
 last_verified: 2026-06-04

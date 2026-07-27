@@ -149,3 +149,24 @@ Rationale:
   ownership.
 - Distinguishing normative rules from descriptive knowledge and experience
   makes review and promotion safer.
+
+## 2026-07-28: Card System v0.1 Direction
+
+Status: accepted-for-implementation
+
+Prajnavex keeps `type: card` as the storage envelope and adds `card_type` for
+semantic classification. The initial taxonomy is `entity`, `event`, `period`,
+`concept`, `mechanism`, `claim`, `work`, `comparison`, and `method`.
+
+`method` is reusable knowledge and is not automatically a Skill. A method may
+become a Skill candidate only after repeated use, stable scope, explicit
+inputs/outputs, validation, and documented failure handling.
+
+Use `sources` as the future multi-source provenance field while retaining
+`source_id` during migration. Use `relations` as the canonical semantic link
+map while retaining `related_cards` for compatibility. Use `stage` for
+workflow lifecycle and `epistemic_status` for knowledge posture; do not add a
+second generic status field.
+
+Migration is backward-compatible: templates, validators, indexes, and existing
+Cards are upgraded before expanding the taxonomy across new source material.

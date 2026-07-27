@@ -6,6 +6,11 @@ summary: "治理知识域既记录应该遵守的规范，也记录系统事实�
 tags: [ai-collaboration-governance, knowledge, lessons-learned, provenance, lifecycle]
 stage: promotable
 source_id: source-20260726-ai-collaboration-governance-domain
+card_type: method
+sources: [source-20260726-ai-collaboration-governance-domain]
+relations: {}
+evidence_level: derived
+epistemic_status: working
 created: 2026-07-26
 updated: 2026-07-26
 last_verified: 2026-07-26

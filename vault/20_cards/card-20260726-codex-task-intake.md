@@ -6,6 +6,11 @@ summary: "Codex 在行动前需要判断任务属于哪个项目或工作区、�
 tags: [ai-collaboration-governance, codex-governance, intake, scope, project-affiliation]
 stage: promotable
 source_id: source-20260726-codex-governance-framework
+card_type: method
+sources: [source-20260726-codex-governance-framework]
+relations: {}
+evidence_level: derived
+epistemic_status: working
 created: 2026-07-26
 updated: 2026-07-26
 last_verified: 2026-07-26

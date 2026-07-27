@@ -6,6 +6,11 @@ summary: "Codex、Claude 和其他 Agent 是具体实现；治理应先定义人
 tags: [ai-collaboration-governance, agent-roles, codex, claude, responsibility]
 stage: promotable
 source_id: source-20260726-ai-collaboration-governance-domain
+card_type: concept
+sources: [source-20260726-ai-collaboration-governance-domain]
+relations: {}
+evidence_level: derived
+epistemic_status: working
 created: 2026-07-26
 updated: 2026-07-26
 last_verified: 2026-07-26

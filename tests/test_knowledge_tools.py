@@ -30,6 +30,20 @@ class KnowledgeIndexTests(unittest.TestCase):
     def test_parse_inline_list(self):
         self.assertEqual(parse_value("[a, b, c]"), ["a", "b", "c"])
 
+    def test_parse_relation_map(self):
+        self.assertEqual(parse_value("{related_to: [card-a, card-b]}"), {"related_to": ["card-a", "card-b"]})
+
+    def test_card_v01_fields_are_validated_and_backlinked(self):
+        records = [
+            {"path": "vault/10_sources/source.md", "id": "source-x", "type": "source", "title": "S", "summary": "S", "tags": [], "stage": "source", "created": "2026-07-28", "source_type": "manual"},
+            {"path": "vault/20_cards/card.md", "id": "card-x", "type": "card", "title": "C", "summary": "C", "tags": [], "stage": "promotable", "created": "2026-07-28", "source_id": "source-x", "card_type": "method", "sources": ["source-x"], "relations": {"related_to": ["card-y"]}, "evidence_level": "derived", "epistemic_status": "working"},
+            {"path": "vault/20_cards/card-y.md", "id": "card-y", "type": "card", "title": "Y", "summary": "Y", "tags": [], "stage": "promotable", "created": "2026-07-28", "source_id": "source-x", "card_type": "concept", "sources": ["source-x"], "relations": {}, "evidence_level": "derived", "epistemic_status": "working"},
+        ]
+        errors, _ = validate_records(records)
+        self.assertEqual(errors, [])
+        backlinks = build_backlinks(records)
+        self.assertIn("card-x", backlinks["card-y"]["cards"])
+
     def test_missing_link_is_error(self):
         records = [
             {"path": "vault/20_cards/card.md", "id": "card-x", "type": "card", "title": "X", "summary": "X", "tags": [], "stage": "extracted", "created": "2026-06-04", "source_id": "source-missing"},

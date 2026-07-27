@@ -6,6 +6,11 @@ summary: "AI Coding 的代际变化可以被看作宿主入口迁移：从编辑
 tags: [ai, coding-agent, product-strategy, host-layer]
 stage: promotable
 source_id: "source-20260624-ai-coding-host-layer-descent-infographics"
+card_type: concept
+sources: [source-20260624-ai-coding-host-layer-descent-infographics]
+relations: {}
+evidence_level: derived
+epistemic_status: working
 created: 2026-06-24
 updated: 2026-07-26
 last_verified: 2026-07-26

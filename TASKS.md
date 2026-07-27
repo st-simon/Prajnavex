@@ -47,6 +47,9 @@ Done criteria:
   governance map, two draft governance Skills, and the first Codex governance
   subdomain covering intake, Proposal/routing, coding/verification, and
   publish/closeout.
+- Implemented Card System v0.1 backward-compatible fields and migrated all
+  current Cards with `card_type`, `sources`, `relations`, `evidence_level`,
+  and `epistemic_status` while retaining `source_id` and `related_cards`.
 - Verified the complete v0.2 operating model with clean validation, audit, and
   unit tests.
 - Added a formal document ingestion command that creates Source drafts, atomic
@@ -58,6 +61,11 @@ Done criteria:
   v0.3 guided Source/Card drafting, and the model-neutral v0.4-v0.6 roadmap.
 
 ## Known Gaps
+
+- Card System v0.1 still needs cross-source entity/event seed Cards and a
+  reviewed method-card set before any method-to-Skill promotion.
+- Card semantic classification uses conservative migration defaults and needs
+  domain-by-domain refinement during review.
 
 - No browser capture extension is wired yet.
 - No embedding or semantic search index exists yet.

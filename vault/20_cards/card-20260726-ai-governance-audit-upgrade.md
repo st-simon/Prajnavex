@@ -6,6 +6,11 @@ summary: "治理框架必须记录规则是否有效、是否过期、是否被�
 tags: [ai-collaboration-governance, audit, upgrade, review, observability]
 stage: promotable
 source_id: source-20260726-ai-collaboration-governance-domain
+card_type: method
+sources: [source-20260726-ai-collaboration-governance-domain]
+relations: {}
+evidence_level: derived
+epistemic_status: working
 created: 2026-07-26
 updated: 2026-07-26
 last_verified: 2026-07-26

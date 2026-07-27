@@ -7,6 +7,11 @@ tags: [investing, trading, risk-management, position-sizing]
 stage: promotable
 source_id: "source-20260605-unknown-market-wizards"
 source_url: "https://ebooks.cmpbook.com/detail?id=25094"
+card_type: concept
+sources: [source-20260605-unknown-market-wizards]
+relations: {}
+evidence_level: derived
+epistemic_status: working
 created: 2026-06-05
 updated: 2026-06-05
 last_verified: 2026-06-05

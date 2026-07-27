@@ -6,6 +6,11 @@ summary: "比起让 agent 一次性写代码，更重要的能力是把 agent �
 tags: [ai, coding-agent, autoresearch, feedback-loop, product-strategy]
 stage: promotable
 source_id: "source-20260624-ai-coding-host-layer-descent-infographics"
+card_type: mechanism
+sources: [source-20260624-ai-coding-host-layer-descent-infographics]
+relations: {}
+evidence_level: derived
+epistemic_status: working
 created: 2026-06-24
 updated: 2026-07-26
 last_verified: 2026-07-26

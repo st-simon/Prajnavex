@@ -47,6 +47,28 @@ Agent clients should search frontmatter first and request a bounded context
 pack. They should not read the whole Vault or treat a derived Card as stronger
 than its authority path.
 
+## Card System v0.1
+
+Cards keep `type: card` as the storage envelope and add semantic fields:
+
+- `card_type`: `entity`, `event`, `period`, `concept`, `mechanism`, `claim`,
+  `work`, `comparison`, or `method`.
+- `entity_kind`: for entity Cards, one of `person`, `group`, `institution`, or
+  `place`.
+- `evidence_level`: `direct`, `corroborated`, `derived`, `speculative`, or
+  `unknown`.
+- `epistemic_status`: the current knowledge posture, such as `fact`,
+  `interpretation`, `hypothesis`, `method`, `question`, `working`, or
+  `uncertain`.
+- `sources`: the future multi-source provenance list. `source_id` remains for
+  backward compatibility during migration.
+- `relations`: a YAML map from semantic relation names to note IDs.
+  `related_cards` remains as a compatibility field during migration.
+
+`method` is reusable knowledge, not an active Skill. A method becomes a Skill
+candidate only after repeated use, stable scope, explicit inputs/outputs,
+validation, and documented failure handling.
+
 ## Inbox Draft Review
 
 Document ingestion drafts live outside the stable index:

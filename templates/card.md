@@ -1,11 +1,17 @@
 ---
 id: card-YYYYMMDD-slug
 type: card
+card_type: concept
 title: ""
 summary: ""
 tags: []
 stage: extracted
 source_id: ""
+sources: []
+relations: {}
+entity_kind: ""
+evidence_level: unknown
+epistemic_status: working
 source_url: ""
 created: YYYY-MM-DD
 updated: YYYY-MM-DD

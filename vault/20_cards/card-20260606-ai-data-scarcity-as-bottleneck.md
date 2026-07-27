@@ -7,6 +7,11 @@ tags: [ai, data, bottleneck, industry-research, investment-research]
 stage: promotable
 source_id: "source-20260606-qbitai-qbd-ai-data-acquisition"
 source_url: ""
+card_type: concept
+sources: [source-20260606-qbitai-qbd-ai-data-acquisition]
+relations: {}
+evidence_level: derived
+epistemic_status: working
 created: 2026-06-06
 updated: 2026-06-06
 last_verified: 2026-06-06

@@ -7,6 +7,11 @@ tags: [ai, regulation, ai-safety, technology-governance, constraint-window]
 stage: promotable
 source_id: "source-20260605-anthropic-recursive-self-improvement"
 source_url: "https://www.anthropic.com/institute/recursive-self-improvement"
+card_type: concept
+sources: [source-20260605-anthropic-recursive-self-improvement]
+relations: {}
+evidence_level: derived
+epistemic_status: working
 created: 2026-06-05
 updated: 2026-06-05
 last_verified: 2026-06-05

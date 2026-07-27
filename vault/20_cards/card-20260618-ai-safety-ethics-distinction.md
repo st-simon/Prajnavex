@@ -7,6 +7,11 @@ tags: [ai-safety, ai-ethics, consensus-building, ai-governance]
 stage: extracted
 source_id: "source-20260618-tech-accelerationism-ai-governance"
 source_url: ""
+card_type: concept
+sources: [source-20260618-tech-accelerationism-ai-governance]
+relations: {}
+evidence_level: derived
+epistemic_status: working
 created: 2026-06-18
 updated: 2026-06-18
 last_verified: 2026-06-18

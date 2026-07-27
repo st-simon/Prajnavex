@@ -6,6 +6,11 @@ summary: "宪法层规定人类最终控制、可追溯、最小权限、风险�
 tags: [ai-collaboration-governance, constitution, principles, human-control]
 stage: promotable
 source_id: source-20260726-ai-collaboration-governance-domain
+card_type: concept
+sources: [source-20260726-ai-collaboration-governance-domain]
+relations: {}
+evidence_level: derived
+epistemic_status: working
 created: 2026-07-26
 updated: 2026-07-26
 last_verified: 2026-07-26

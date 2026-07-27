@@ -7,6 +7,11 @@ tags: [prajnavex, image-ingest, ocr, workflow]
 stage: extracted
 source_id: "source-20260602-coffee-bean-family-infographic"
 source_url: ""
+card_type: method
+sources: [source-20260602-coffee-bean-family-infographic]
+relations: {}
+evidence_level: derived
+epistemic_status: working
 created: 2026-06-02
 updated: 2026-06-04
 last_verified: 2026-06-04
