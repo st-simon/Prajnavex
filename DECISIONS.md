@@ -46,3 +46,14 @@ Cleaned Text -> reviewed usable knowledge
 ```
 
 OCR is not the primary knowledge extraction layer for screenshots, information graphics, slides, charts, tables, or social posts. For those image types, use `vision-first` or `hybrid` extraction and require human approval before source indexing.
+
+
+## 2026-07-28: Card System v0.1 Direction
+
+Status: accepted-for-design
+
+Prajnavex will keep `type: card` as the storage envelope and add `card_type` for semantic classification. The initial taxonomy is `entity`, `event`, `period`, `concept`, `mechanism`, `claim`, `work`, `comparison`, and `method`.
+
+`method` is a first-class knowledge card and is not automatically a Skill. A method may become a Skill candidate only after repeated use, stable scope, validation, explicit inputs/outputs, and failure handling. `sources` will become the future multi-source provenance field, while `source_id` remains backward-compatible during migration. `relations` will be the canonical semantic link structure; `related_cards` remains a compatibility field until the validator and index are upgraded.
+
+See `proposals/active/20260728-prajnavex-card-system-v01.md` for the scoped design record.

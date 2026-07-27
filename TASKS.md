@@ -36,3 +36,14 @@ Done criteria:
 - No embedding or semantic search index exists yet.
 - No direct Obsidian plugin dependency has been selected.
 - Audit is clean on the current vault; future warnings should be treated as review work.
+
+
+## Card System v0.1 Workstream
+
+Status: design accepted; implementation pending
+
+- Add backward-compatible `card_type`, `sources`, `relations`, `evidence_level`, and `epistemic_status` validation.
+- Add card templates for entity, event, method, mechanism, claim, and other approved types.
+- Classify existing cards without mass rewriting their bodies.
+- Seed cross-source entity/event cards from the China history material.
+- Extract technology methods as cards first; review Skill promotion only after repeated validation.
